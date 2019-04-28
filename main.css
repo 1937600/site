@@ -9,10 +9,7 @@ html {
 body {
     margin-bottom: 58px; /* margin-bottom da altura do footer */
     padding: 0;
-    background-image: url("/img/bg.jpeg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-color: #eee;
     font-family: 'Roboto', sans-serif;
     color: #333;
 }
@@ -25,7 +22,7 @@ header:not(:empty){
 }
 
 header:empty{
-    margin-top: 120px;
+    margin-top: 78px;
 }
 
 /* Espaço total da logomarca (triângulo + nome) */
@@ -55,6 +52,7 @@ header h1 {
     left: 14px;
     margin: 0;
     width: 311px;
+    color: black;
     font-weight: 400;
 	font-size: 50px;
 }
@@ -64,6 +62,7 @@ header h2 {
     margin: 20px auto;
     padding: 0;
     text-align: center;
+    color: black;
 	letter-spacing: 1.5px;
     font-weight: 300;
 	font-size: 20px;
@@ -72,50 +71,7 @@ header h2 {
 nav {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
     padding: 10px;
-    background-color: #bbb;
-}
-
-/* Espaço botão do triângulo */
-nav #logo {
-    margin-right: 16px;
-    width: 37px;
-    height: 35px;
-}
-
-/* S */
-nav #logo a #s-peq {
-    transition: all .5s;
-    position: relative;
-    top: -9px; /* Coordenadas para deixar dentro da #logo */
-    left: 14px;
-    font-size: 40px;
-    color: #ddd;
-}
-
-/* Triângulo amarelo */
-nav #logo a #triangulo-peq {
-    transition: all .5s;
-    position: absolute;
-    content: "";
-    top: -22px;
-    left: 16px;
-    z-index: -1;
-    border-style: solid;
-    border-width: 33px 18px;
-    border-color: transparent;
-    border-bottom-color: #ccc;
-}
-
-nav #logo a:hover{
-    text-decoration: none;
-}
-
-nav #logo a:hover #s-peq {
-    color: white;
-}
-
-nav #logo a:hover #triangulo-peq {
-    border-bottom-color: #FFBE00;
+    background-color: #333;
 }
 
 .navbar-toggler {
@@ -133,7 +89,6 @@ nav ul {
 
 /* Barra web */
 nav .collapse:not(.show) ul {
-    padding-right: 53px;
     margin: auto;
 }
 
@@ -142,19 +97,19 @@ nav .collapse:not(.show) ul li {
 }
 
 nav ul.navbar-nav li a.nav-link {
-    transition: box-shadow .5s;
+    transition: .2s;
     border-style: solid;
     border-width: 1px;
-    border-color: #bbb;
+    border-color: #333;
     background-color: rgba(255, 255, 255, .5);
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .75);
     text-decoration: none;
 }
 
 /* Botão da própria página */
 nav ul.navbar-nav li.botaoPagAtual a.nav-link {
-    background-color: rgba(255, 255, 255, .2);
-    color: rgba(0, 0, 0, .25);
+    background-color: rgba(255, 255, 255, .25);
+    color: rgba(0, 0, 0, .5);
 }
 
 /* Bordas da esquerda */
@@ -172,10 +127,10 @@ nav .collapse:not(.show) ul li:last-child a {
 
 /* Efeito - botão p/ outras páginas */
 nav ul.navbar-nav li.botaoMenu:hover  .nav-link {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .3), transparent);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, .05);
+    background-color: rgba(255, 255, 255, .4);
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, .9);
 }
 /* Efeito - botão p/ outras páginas */
 nav ul li.botaoMenu:active a {
@@ -184,11 +139,6 @@ nav ul li.botaoMenu:active a {
 
 .card-deck{
     max-width: 960px;
-}
-/* Rodapé + margem padrão */
-.card-deck,
-main section:last-child{
-    margin-bottom: 138px;
 }
 
 main .card-deck .card {
@@ -200,6 +150,7 @@ main .card-deck .card {
 
 main section {
     margin: 20px auto;
+    padding: 15px;
 }
 
 main section ul{
@@ -214,10 +165,28 @@ main section {
     border-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, .1);
-    background-color: rgba(140, 140, 140, .8);
+    background-color: #fff;
     border-radius: 5px;
 }
 
+/* Rodapé + margem padrão */
+.card-deck,
+main section:last-child{
+    margin-bottom: 78px;
+}
+
+main section .btn-primary {
+color: #333;
+background-color: #FFBE00;
+border-color: #FFBE00;
+}
+
+main section .btn-primary:hover,
+main section .btn-primary:active {
+color: #000;
+background-color: #E5A300;
+border-color: #CC9200;
+}
 
 main a {
     color: #ffd700;
@@ -246,11 +215,12 @@ main .card .card-body p a:active{
     background-color: #FFBE00;
 }
 
+
 h3,
 h3.card-title {
-    margin: 20px;
+    margin: 0px 0 15px 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 28px;
     color: #333;
 }
 
@@ -262,17 +232,34 @@ h3.card-title {
     text-align: center;
 }
 
+h4 {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #996D00;
+}
+
 p:not(:empty),
 spam:not(:empty) {
-    margin: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
     text-align: left;
     font-size: 1em;
     color: #333;
 	letter-spacing: .3px;
 }
 
+p:last-child {
+    margin-bottom: 0;
+}
+
 p.card-text{
     text-align: center;
+}
+
+p .data{
+    color: #aaa;
+    font-size: 14px;
 }
 
 strong{
@@ -288,4 +275,5 @@ strong{
     line-height: 58px;
     text-align: center;
     color: rgba(0, 0, 0, .6);
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, .1);
 }
